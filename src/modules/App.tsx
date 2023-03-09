@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { ColorModeContext, useMode } from '../theme';
-import Topbar from "./scenes/global/Topbar";
-import {Routers} from "../routes/Routers";
+import Topbar from './scenes/global/Topbar';
+import { Routers } from '../routes/Routers';
+import SideBar from './scenes/global/SideBar';
 
 const App: FC = () => {
 	const { theme, colorMode } = useMode();
@@ -12,8 +13,9 @@ const App: FC = () => {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 				<div className='app'>
+					<SideBar />
 					<main className='content'>
-						<Topbar/>
+						<Topbar />
 						<Routers />
 					</main>
 				</div>
