@@ -69,3 +69,27 @@ export interface IGeography {
   id: string;
   value: number;
 }
+interface Coordinates {
+  [index: number]: [number, number];
+}
+
+interface Geometry {
+  type: string;
+  coordinates: Coordinates[] | Coordinates[][];
+}
+
+interface Properties {
+  name: string;
+}
+
+interface IGeoFeatures {
+  type: string;
+  properties: Properties;
+  geometry: Geometry;
+  id: string;
+}
+
+export interface IGeo {
+  type: string,
+  features: IGeoFeatures[]
+}

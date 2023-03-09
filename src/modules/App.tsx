@@ -1,14 +1,22 @@
-import { FunctionComponent } from 'react';
-import Layout from '../common/components/layout/Layout';
-import { Routers } from '../routes/Routers';
+import { FC } from 'react';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { ColorModeContext, useMode } from '../theme';
+import Topbar from "./scenes/global/Topbar";
 
-interface IAppProps {}
+const App: FC = () => {
+	const { theme, colorMode } = useMode();
 
-const App: FunctionComponent<IAppProps> = () => {
 	return (
-    <Layout>
-      <Routers />
-    </Layout>
+		<ColorModeContext.Provider value={colorMode}>
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<div className='app'>
+					<main className='content'>
+						<Topbar/>
+					</main>
+				</div>
+			</ThemeProvider>
+		</ColorModeContext.Provider>
 	);
 };
 
