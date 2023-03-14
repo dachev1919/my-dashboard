@@ -1,29 +1,21 @@
 import { FC } from 'react';
-import { Box, useTheme } from '@mui/material';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { tokens } from '../../../theme';
-import { mockDataContacts } from '../../../common/data/mockData';
-import Header from '../../../common/components/header/Header';
+import { Box, Typography, useTheme } from '@mui/material';
+import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
+import { tokens } from '../../theme';
+import { mockDataInvoices } from '../../common/data/mockData';
+import Header from '../../common/components/header/Header';
 
-const Contacts: FC = () => {
+const Invoices: FC = () => {
 	const theme = useTheme();
 	const colors = tokens(theme.palette.mode);
 
 	const columns: any = [
 		{ field: 'id', headerName: 'ID', flex: 0.5 },
-		{ field: 'registrarId', headerName: 'Registrar ID' },
 		{
 			field: 'name',
 			headerName: 'Name',
 			flex: 1,
 			cellClassName: 'name-column--cell'
-		},
-		{
-			field: 'age',
-			headerName: 'Age',
-			type: 'number',
-			headerAlign: 'left',
-			align: 'left'
 		},
 		{
 			field: 'phone',
@@ -36,27 +28,25 @@ const Contacts: FC = () => {
 			flex: 1
 		},
 		{
-			field: 'address',
-			headerName: 'Address',
-			flex: 1
+			field: 'cost',
+			headerName: 'Cost',
+			flex: 1,
+			renderCell: (params: GridRenderCellParams) => {
+				<Typography color={colors.greenAccent[500]}>${params.row.cost}</Typography>;
+			}
 		},
 		{
-			field: 'city',
-			headerName: 'City',
+			field: 'date',
+			headerName: 'Date',
 			flex: 1
 		},
-		{
-			field: 'zipCode',
-			headerName: 'ZipCode',
-			flex: 1
-		}
 	];
 
 	return (
 		<Box m='20px'>
 			<Header
-				title='CONTACTS'
-				subtitle='List of Contacts for Future Reference'
+				title='INVOICES'
+				subtitle='List of Invoice balances'
 			/>
 			<Box
 				m='40px 0 0 0'
@@ -83,21 +73,15 @@ const Contacts: FC = () => {
 						backgroundColor: colors.blueAccent[700],
 						borderRadius: ' 0 0 4px 4px'
 					},
-					'& .MuiDataGrid-toolbarContainer .MuiButton-text': {
-						color: `${colors.grey[100]} !important`
-					}
+          '& .MuiCheckbox-root': {
+            color: `${colors.greenAccent[200]} !important`
+          }
 				}}
 			>
-				<DataGrid
-					rows={mockDataContacts}
-					columns={columns}
-					slots={{
-						toolbar: GridToolbar,
-					}}
-				/>
+				<DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
 			</Box>
 		</Box>
 	);
 };
 
-export default Contacts;
+export default Invoices;

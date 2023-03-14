@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Header from '../../../common/components/header/Header';
+import Header from '../../common/components/header/Header';
 import { Box } from '@mui/material';
 
 const Dashboard: FC = () => {

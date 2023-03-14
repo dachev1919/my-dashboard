@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from "../modules/scenes/dashboard";
-import Team from "../modules/scenes/team";
-import Contacts from "../modules/scenes/contacts";
-import Invoices from "../modules/scenes/invoices";
-import Form from "../modules/scenes/form";
+import Dashboard from "../modules/dashboard";
+import Team from "../modules/team";
+import Contacts from "../modules/contacts";
+import Invoices from "../modules/invoices";
+import Form from "../modules/form";
+import Calendar from "../modules/calendar";
 
 interface RoutersProps {}
 
@@ -23,7 +24,7 @@ export const Routers: FC<RoutersProps> = () => {
         {/*<Route path='/my-dashboard/pie' element={<Pie />} />*/}
         {/*<Route path='/my-dashboard/faq' element={<FAQ />} />*/}
         {/*<Route path='/my-dashboard/geography' element={<Geography />} />*/}
-        {/*<Route path='/my-dashboard/calendar' element={<Calendar />} />*/}
+        <Route path='/my-dashboard/calendar' element={<Calendar />} />
       </Routes>
     </>
   );

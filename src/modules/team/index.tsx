@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
-import { tokens } from '../../../theme';
-import { mockDataTeam } from '../../../common/data/mockData';
+import { tokens } from '../../theme';
+import { mockDataTeam } from '../../common/data/mockData';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-import Header from '../../../common/components/header/Header';
+import Header from '../../common/components/header/Header';
 import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
 
 const Team: FC = () => {
