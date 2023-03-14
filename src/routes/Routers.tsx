@@ -6,6 +6,7 @@ import Contacts from "../modules/contacts";
 import Invoices from "../modules/invoices";
 import Form from "../modules/form";
 import Calendar from "../modules/calendar";
+import Faq from "../modules/faq";
 
 interface RoutersProps {}
 
@@ -22,7 +23,7 @@ export const Routers: FC<RoutersProps> = () => {
         <Route path='/my-dashboard/form' element={<Form />} />
         {/*<Route path='/my-dashboard/line' element={<Line />} />*/}
         {/*<Route path='/my-dashboard/pie' element={<Pie />} />*/}
-        {/*<Route path='/my-dashboard/faq' element={<FAQ />} />*/}
+        <Route path='/my-dashboard/faq' element={<Faq />} />
         {/*<Route path='/my-dashboard/geography' element={<Geography />} />*/}
         <Route path='/my-dashboard/calendar' element={<Calendar />} />
       </Routes>
