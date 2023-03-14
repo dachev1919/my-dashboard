@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from "../modules/scenes/dashboard";
 import Team from "../modules/scenes/team";
 import Contacts from "../modules/scenes/contacts";
+import Invoices from "../modules/scenes/invoices";
 
 interface RoutersProps {}
 
@@ -14,7 +15,7 @@ export const Routers: FC<RoutersProps> = () => {
         <Route path='/my-dashboard' element={<Dashboard />} />
         <Route path='/my-dashboard/team' element={<Team />} />
         <Route path='/my-dashboard/contacts' element={<Contacts />} />
-        {/*<Route path='/my-dashboard/invoices' element={<Invoices />} />*/}
+        <Route path='/my-dashboard/invoices' element={<Invoices />} />
         {/*<Route path='/my-dashboard/bar' element={<Bar />} />*/}
         {/*<Route path='/my-dashboard/form' element={<Form />} />*/}
         {/*<Route path='/my-dashboard/line' element={<Line />} />*/}

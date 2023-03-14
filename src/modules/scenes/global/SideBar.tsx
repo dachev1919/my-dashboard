@@ -104,7 +104,7 @@ const SideBar: FC = () => {
 									src={userImage}
 									alt='profile-user'
 									width='100px'
-									style={{ cursor: 'pointer', borderRadius: '50%', maxWidth: '70%' }}
+									style={{ cursor: 'pointer', transition: 'all .3s ease', borderRadius: '50%', maxWidth: isCollapsed ? '44px' : '100px', maxHeight: isCollapsed ? '44px' : '100px', objectFit: 'cover' }}
 								/>
 							</Box>
 							<Box textAlign='center' sx={{opacity: isCollapsed ? '0' : '1'}}>
