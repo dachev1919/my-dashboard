@@ -2,6 +2,7 @@
   "name": "social",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dachev1919.github.io/my-dashboard",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -17,8 +18,8 @@
     "@nivo/bar": "^0.80.0",
     "@nivo/core": "^0.80.0",
     "@nivo/geo": "^0.80.0",
-    "@nivo/pie": "^0.80.0",
     "@nivo/line": "^0.79.1",
+    "@nivo/pie": "^0.80.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/react-redux": "^7.1.25",
     "formik": "^2.2.9",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,6 +43,8 @@
     "yup": "^1.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
