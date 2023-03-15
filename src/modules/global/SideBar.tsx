@@ -88,7 +88,7 @@ const SideBar: FC = () => {
 								ml='15px'
 							>
 								<Typography variant='h3' color={colors.grey[100]}>
-									ADMINIS
+									ADMINS
 								</Typography>
 								<IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
 									<MenuOutlinedIcon />
@@ -115,10 +115,10 @@ const SideBar: FC = () => {
 									sx={{ m: '10px 0 0 0' }}
 									minWidth='max-content'
 								>
-									Ed Roh
+									Dachev Oleh
 								</Typography>
 								<Typography variant='h5' color={colors.greenAccent[500]} minWidth='max-content'>
-									VP Fancy Admin
+									VP Test Admin
 								</Typography>
 							</Box>
 						</Box>

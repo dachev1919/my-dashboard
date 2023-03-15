@@ -3,7 +3,7 @@ import { Box, Button, TextField } from '@mui/material';
 import { Formik, FormikValues } from 'formik';
 import * as yup from 'yup';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Header from '../../common/components/header/Header';
+import Header from 'common/components/header/Header';
 
 interface IInitialValue {
 	firstName: string;

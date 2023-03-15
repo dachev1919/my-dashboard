@@ -13,8 +13,8 @@ import {
 	Typography,
 	useTheme
 } from '@mui/material';
-import Header from '../../common/components/header/Header';
-import { tokens } from '../../theme';
+import Header from 'common/components/header/Header';
+import { tokens } from 'theme';
 
 const Calendar: FC = () => {
 	const theme = useTheme();

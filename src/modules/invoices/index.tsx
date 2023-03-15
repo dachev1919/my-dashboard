@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
 import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
-import { tokens } from '../../theme';
-import { mockDataInvoices } from '../../common/data/mockData';
-import Header from '../../common/components/header/Header';
+import { tokens } from 'theme';
+import { mockDataInvoices } from 'common/data/mockData';
+import Header from 'common/components/header/Header';
 
 const Invoices: FC = () => {
 	const theme = useTheme();

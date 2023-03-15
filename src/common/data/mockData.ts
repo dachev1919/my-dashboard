@@ -1,5 +1,4 @@
 import {
-	IBar,
 	IContact,
 	IGeography,
 	IInvoice,
@@ -327,7 +326,7 @@ export const mockTransactions: ITransaction[] = [
 	}
 ];
 
-export const mockBarData: IBar[] = [
+export const mockBarData: any = [
 	{
 		country: 'AD',
 		'hot dog': 137,
